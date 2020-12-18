@@ -9,17 +9,6 @@ WINDOW_WIDTH = 288
 WINDOW_HEIGHT = 512
 FPS = 60
 
-DIRECTORY = os.path.dirname(__file__)
-HS_FILE = 'highscore.txt'
-
-def load_data(DIRECTORY, HS_FILE):
-    with open(os.path.join(DIRECTORY, HS_FILE), 'r') as f:
-        try:
-            highscore = float(f.read())
-        except:
-            highscore = 0
-    return highscore
-
 
 def draw_floor():
 	screen.blit(floor_surface,(floor_x_pos,430))
